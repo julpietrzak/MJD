@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MJD:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MJD_jar</output-path>
+    <root id="archive" name="MJD.jar">
+      <element id="module-output" name="MJD" />
+    </root>
+  </artifact>
+</component>
