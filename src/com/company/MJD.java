@@ -3,6 +3,8 @@ package com.company;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 
 public class MJD {
     int day, month, year, hour, min;
@@ -40,10 +42,10 @@ public class MJD {
         double partOfDay = (hour / 24.0) + (min / 24.0 / 60.0) + (sec / 24.0 / 60.0 / 60.0);
         double MJDdateWhour = MJDFMDATE + partOfDay;
 
-        output.append(String.valueOf(MJDdateWhour));
-        output1.append(String.valueOf(MJDdateWhour));
-        output2.append(String.valueOf(MJDdateWhour));
-        output3.append(String.valueOf(MJDdateWhour));
+        output.append(String.format("%.6f",MJDdateWhour).replace(",","."));
+        output1.append(String.format("%.6f",MJDdateWhour).replace(",","."));
+        output2.append(String.format("%.6f",MJDdateWhour).replace(",","."));
+        output3.append(String.format("%.6f",MJDdateWhour).replace(",","."));
 
     }
 }

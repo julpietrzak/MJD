@@ -17,7 +17,7 @@ public class Main {
         String[] dane;
 
         File out = new File("MJD_GPS.txt");
-       PrintWriter output = new PrintWriter(out);
+        PrintWriter output = new PrintWriter(out);
 
         File out1 = new File("MJD_GALILEO.txt");
         PrintWriter output1 = new PrintWriter(out1);
@@ -42,21 +42,16 @@ public class Main {
             min = Integer.parseInt(time[1]);
             sec = Double.parseDouble(time[2]);
 
-
-            MJD MJ = new MJD(day, m, y, h, min, sec, output,output1,output2,output3);
+            MJD MJ = new MJD(day, m, y, h, min, sec, output, output1, output2, output3);
             output.append(" " + dane[2] + "\n");
             output1.append(" " + dane[3] + "\n");
             output2.append(" " + dane[4] + "\n");
             output3.append(" " + dane[6] + "\n");
-
-
 
         }
         output.close();
         output1.close();
         output2.close();
         output3.close();
-
-
     }
 }

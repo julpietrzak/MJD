@@ -56,7 +56,8 @@ public class MJD2DATE {
             y = D - 4715;
         }
 
-        output.append(y + "-" + m + "-" + day + " " + h + ":" + min + ":" + sec);
+        output.append(String.format("%d %d %d %d %d %2.3f",y,m,day,h,min,sec).replace(",","."));
+        //output.append(y + "-" + m + "-" + day + " " + h + ":" + min + ":" + sec);
 
 
     }
